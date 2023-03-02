@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: onlineseatbooking-app
-        image: nikhil6499/multiplex-booking-system:0.2
+        image: mounikachowdary/onlineseat-booking-system:0.4
         ports:
         - containerPort: 8080
