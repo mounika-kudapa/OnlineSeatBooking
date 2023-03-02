@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onlineseatbooking-app-deployment
+  labels:
+    app: onlineseatbooking-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: onlineseatbooking-app
+  template:
+    metadata:
+      labels:
+        app: onlineseatbooking-app
+    spec:
+      containers:
+      - name: onlineseatbooking-app
+        image: nikhil6499/multiplex-booking-system:0.2
+        ports:
+        - containerPort: 8080
